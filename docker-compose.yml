@@ -9,8 +9,9 @@ services:
       - "8080:8080"
     volumes:
       - ./:/go/src/github.com/dip-dev/go-tutorial
-  mock:
+  mock-api:
     container_name: mock-server
-    image: dipinc/go-tutorial-mock:latest
+    build:
+      context: ./mock
     ports:
       - "8081:80"
