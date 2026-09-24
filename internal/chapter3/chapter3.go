@@ -25,7 +25,7 @@ type EntriesResponse struct {
 	Entries []Entry `json:"entries"`
 }
 
-func Get(w http.ResponseWriter, r *http.Request) {
+func Get(w http.ResponseWriter, _ *http.Request) {
 	// 1. ユーザ情報取得APIへGET
 	userReq, err := http.NewRequest(
 		http.MethodGet,

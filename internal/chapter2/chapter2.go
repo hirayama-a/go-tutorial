@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func Get(w http.ResponseWriter, r *http.Request) {
+func Get(w http.ResponseWriter, _ *http.Request) {
 	// mock API向けのGETリクエストを作成
 	// クエリパラメータ age=25 もURLに付ける
 	req, err := http.NewRequest(
@@ -48,7 +48,7 @@ func Get(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func Post(w http.ResponseWriter, r *http.Request) {
+func Post(w http.ResponseWriter, _ *http.Request) {
 	// mock APIへ送るフォームデータを作成
 	form := url.Values{}
 	form.Set("name", "dip 次郎")
